@@ -11,7 +11,7 @@ const Operators = (props) => {
   // STEP 2 - add the imported data to state
   const [operatorState, setOperatorState] = useState(operators)
 
-  const {setScreenTotal, setPreviousTotal, screenTotal, previousTotal} = props;
+  const {setScreenTotal, setPreviousTotal, screenTotal, previousTotal, currentOp, setCurrentOp} = props;
   const opClickHandle = (event) =>
   {
     if (event.target.textContent !== '=')
@@ -41,8 +41,9 @@ const Operators = (props) => {
         default:
           break;
       }
-      setPreviousTotal(screenTotal);
+      setPreviousTotal(0);
       setScreenTotal(result)
+      setCurrentOp("=")
     }
   }
   return (

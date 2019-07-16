@@ -9,11 +9,12 @@ import {numbers} from '../../../data'
 
 const Numbers = (props) => {
   // STEP 2 - add the imported data to state
-  const {setScreenTotal, setPreviousTotal, screenTotal, previousTotal} = props;
+  const {setScreenTotal, setPreviousTotal, screenTotal, previousTotal, currentOp, setCurrentOp} = props;
   const numClickHandle = (event) =>
   {
-    if(screenTotal === 0 || ['+','-','x','/'].includes(screenTotal)) 
+    if(screenTotal === 0 || ['+','-','x','/'].includes(screenTotal) || currentOp === "=") 
     {
+      setCurrentOp('')
       if(event.target.textContent === '.')
       {
         setScreenTotal('0.')

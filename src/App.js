@@ -31,9 +31,9 @@ function App() {
         <div className={"all-buttons"}>
           <div className={`left-col-buttons`}>
             <Specials setScreenTotal={setScreenTotal} setPreviousTotal={setPreviousTotal} screenTotal={screenTotal} previousTotal={previousTotal}/>
-            <Numbers setScreenTotal={setScreenTotal} setPreviousTotal={setPreviousTotal} screenTotal={screenTotal} previousTotal={previousTotal}/>
+            <Numbers setScreenTotal={setScreenTotal} setPreviousTotal={setPreviousTotal} screenTotal={screenTotal} previousTotal={previousTotal} currentOp={currentOp} setCurrentOp={setCurrentOp}/>
           </div>
-          <Operators setScreenTotal={setScreenTotal} setPreviousTotal={setPreviousTotal} screenTotal={screenTotal} previousTotal={previousTotal}/>
+          <Operators setScreenTotal={setScreenTotal} setPreviousTotal={setPreviousTotal} screenTotal={screenTotal} previousTotal={previousTotal} currentOp={currentOp} setCurrentOp={setCurrentOp}/>
         </div>
       </div>
     </div>
