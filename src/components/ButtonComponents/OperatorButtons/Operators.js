@@ -14,9 +14,36 @@ const Operators = (props) => {
   const {setScreenTotal, setPreviousTotal, screenTotal, previousTotal} = props;
   const opClickHandle = (event) =>
   {
-    setPreviousTotal(screenTotal)
-    setScreenTotal(event.target.textContent)
-
+    if (event.target.textContent !== '=')
+    {
+      setPreviousTotal(screenTotal)
+      setScreenTotal(event.target.textContent)
+      setOperatorState(event.target.textContent)
+    }
+    else
+    {
+      
+      let result;
+      switch(operatorState)
+      {
+        case('+'):
+          result = previousTotal + screenTotal
+          break;
+        case('-'):
+          result = previousTotal - screenTotal
+          break
+        case('x'):
+          result = previousTotal * screenTotal
+          break
+        case('/'):
+          result = previousTotal / screenTotal
+          break
+        default:
+          break;
+      }
+      setPreviousTotal(screenTotal);
+      setScreenTotal(result)
+    }
   }
   return (
     <div>
