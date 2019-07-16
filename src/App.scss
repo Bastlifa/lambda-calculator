@@ -27,10 +27,18 @@
     width: 85%;
     height: 100px;
     margin: 20px auto;
+    margin-top: -25px;
     background-color: #2D2829;
     border: none;
     border-radius: 50px;
-    
+    p
+    {
+        padding: 0;
+        padding-left: 20px;
+        position: relative;
+        color: white;
+        font-size: 60px;
+    }
 }
 
 .all-buttons
