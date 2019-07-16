@@ -12,12 +12,22 @@ const Numbers = (props) => {
   const {setScreenTotal, setPreviousTotal, screenTotal, previousTotal} = props;
   const numClickHandle = (event) =>
   {
-    if(screenTotal === 0 || ['+','-','x','/'].includes(screenTotal)) {setScreenTotal(parseFloat(event.target.textContent))}
+    if(screenTotal === 0 || ['+','-','x','/'].includes(screenTotal)) 
+    {
+      if(event.target.textContent === '.')
+      {
+        setScreenTotal('0.')
+      }
+      else
+      {
+        setScreenTotal(parseFloat(event.target.textContent))
+      }
+    }
     else
     {
       let stringTot = String(screenTotal);
       stringTot += event.target.textContent;
-      setScreenTotal(parseFloat(stringTot))
+      setScreenTotal(stringTot)
     }
   }
   const [numberState, setNumberState] = useState(numbers);
