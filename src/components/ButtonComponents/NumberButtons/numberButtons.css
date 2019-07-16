@@ -1,0 +1,28 @@
+.number-button
+{
+    background-color: #113C78;
+    height: 80px;
+    width: 80px;
+    color: white;
+    border:none;
+    border-radius: 80px;
+    filter: drop-shadow(0 2px 1px black);
+}
+
+.zero-button
+{
+    background-color: #113C78;
+    height: 80px;
+    
+    color: white;
+    border:none;
+    border-radius: 80px;
+    filter: drop-shadow(0 2px 1px black);
+    width: 193px;
+}
+
+.number-buttons
+{
+    display: flex;
+    flex-flow: row wrap;
+}
