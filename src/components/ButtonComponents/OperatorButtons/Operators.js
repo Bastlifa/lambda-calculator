@@ -27,7 +27,7 @@ const Operators = (props) => {
       switch(operatorState)
       {
         case('+'):
-          result = previousTotal + screenTotal
+          result = parseFloat(previousTotal) + parseFloat(screenTotal)
           break;
         case('-'):
           result = previousTotal - screenTotal
