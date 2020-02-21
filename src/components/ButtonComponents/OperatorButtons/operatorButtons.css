@@ -1,0 +1,10 @@
+.operator-button
+{
+    background-color: #3DB5E5;
+    height: 80px;
+    width: 80px;
+    color: white;
+    border:none;
+    border-radius: 80px;
+    filter: drop-shadow(0 2px 1px black)
+}
